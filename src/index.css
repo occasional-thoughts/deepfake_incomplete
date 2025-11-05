@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&family=Orbitron:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 1.5s linear infinite;
+}
+
+/* For Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* For WebKit (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0e0e2c; /* dark background */
+  border-radius: 8px;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f0ff, #007f9f); /* cyan glow */
+  border-radius: 8px;
+  border: 2px solid #0e0e2c; /* match track border for glow illusion */
+}
+
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00d9ff, #00a3cc);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00f0ff #0e0e2c;
+}
+
+
+p {
+  font-family: 'Exo', Arial, Helvetica, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif !important;
+}
