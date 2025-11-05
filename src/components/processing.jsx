@@ -179,14 +179,20 @@ const Processing = ({ onComplete, fileData, analysisType }) => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-2xl px-4">
-        <div className="mb-12">
-          <div className="relative">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center border-2 border-cyan-400/30 shadow-2xl">
-              <img src="/logoGenReal.png" alt="GenReal.AI Logo" className="h-[3.5rem]" />
+        {/* Loader Animation (replaced image with dual opposite circles) */}
+          <div className="mb-12 relative">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+              {/* Outer circle (clockwise) */}
+              <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin"></div>
+
+              {/* Inner circle (counterclockwise) */}
+              <div className="absolute inset-4 rounded-full border-4 border-transparent border-b-blue-400 animate-spin-reverse"></div>
+
+              {/* Glowing center pulse */}
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-cyan-400/30 to-blue-400/30 blur-sm animate-pulse"></div>
             </div>
-            <div className="absolute inset-0 rounded-full border-2 border-cyan-400/20 animate-ping"></div>
           </div>
-        </div>
+
 
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">

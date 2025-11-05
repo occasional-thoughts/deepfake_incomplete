@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&family=Orbitron:wght@400;700&display=swap');
 @import "tailwindcss";
 
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 1.5s linear infinite;
+}
+
 /* For Firefox */
 .scrollbar-hide {
   scrollbar-width: none;
